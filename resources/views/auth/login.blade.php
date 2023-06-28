@@ -47,18 +47,26 @@
                 </x-button>
             </div>
         </form>
-        <div class="w-100">
-            <a href="{{ route('auth.google') }}">
-                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
-                    style="width: 100%; height: 80px;">
+
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="btn" href="{{ route('auth.google') }}"
+                style="background: rgb(240, 1, 1); padding: 10px; width: 100%; text-align: center; display: block; border-radius:4px; color: #ffffff;">
+                Login with Google
             </a>
         </div>
 
-        <div class="w-100 mt-1">
-            <a class="ml-1 btn btn-primary" href="{{ url('auth/facebook') }}"
-                style="width: 100%; height: 80px;background: blue;color: #ffffff;padding: 5px;border-radius:7px;"
-                id="btn-fblogin">
-                <i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook
+        <div class="flex items-center justify-end mt-4">
+            <a class="btn" href="{{ url('auth/facebook') }}"
+                style="background: rgb(14, 2, 240); padding: 10px; width: 100%; text-align: center; display: block; border-radius:4px; color: #ffffff;">
+                Login with Facebook
+            </a>
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="btn" href="{{ route('auth.github') }}"
+                style="background: black; padding: 10px; width: 100%; text-align: center; display: block; border-radius:4px; color: #ffffff;">
+                Login with Github
             </a>
         </div>
     </x-authentication-card>

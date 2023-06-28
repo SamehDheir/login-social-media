@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GithubController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +40,10 @@ Route::controller(GoogleController::class)->group(function () {
 Route::controller(FacebookController::class)->group(function () {
     Route::get('auth/facebook', 'redirectToFacebook')->name('auth.facebook');
     Route::get('auth/facebook/callback', 'handleFacebookCallback');
+});
+
+
+Route::controller(GithubController::class)->group(function () {
+    Route::get('auth/github', 'redirectToGithub')->name('auth.github');
+    Route::get('auth/github/callback', 'handleGithubCallback');
 });
