@@ -47,10 +47,18 @@
                 </x-button>
             </div>
         </form>
-        <div class=" w-100">
+        <div class="w-100">
             <a href="{{ route('auth.google') }}">
                 <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"
                     style="width: 100%; height: 80px;">
+            </a>
+        </div>
+
+        <div class="w-100 mt-1">
+            <a class="ml-1 btn btn-primary" href="{{ url('auth/facebook') }}"
+                style="width: 100%; height: 80px;background: blue;color: #ffffff;padding: 5px;border-radius:7px;"
+                id="btn-fblogin">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i> Login with Facebook
             </a>
         </div>
     </x-authentication-card>
