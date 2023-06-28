@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TwitterController;
 use App\Http\Controllers\GithubController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\GoogleController;
@@ -46,4 +47,10 @@ Route::controller(FacebookController::class)->group(function () {
 Route::controller(GithubController::class)->group(function () {
     Route::get('auth/github', 'redirectToGithub')->name('auth.github');
     Route::get('auth/github/callback', 'handleGithubCallback');
+});
+
+
+Route::controller(TwitterController::class)->group(function () {
+    Route::get('auth/twitter', 'redirectToTwitter')->name('auth.twitter');
+    Route::get('auth/twitter/callback', 'handleTwitterCallback');
 });

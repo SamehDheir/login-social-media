@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('google_id')->nullable();
             $table->string('facebook_id')->nullable();
             $table->string('github_id')->nullable();
+            $table->string('twitter_id')->nullable();
 
             $table->timestamps();
         });
